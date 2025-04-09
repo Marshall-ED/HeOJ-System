@@ -1,10 +1,13 @@
 package com.hezhu.heoj.model.dto.questionsubmit;
 
+import lombok.Data;
+
 /**
  * @Author Marshall
  * @Date 2025/3/27 16:45
  * @Description: 判题信息
  */
+@Data
 public class JudgeInfo {
     /**
      * 程序执行信息
