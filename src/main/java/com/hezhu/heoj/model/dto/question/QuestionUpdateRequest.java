@@ -46,7 +46,7 @@ public class QuestionUpdateRequest implements Serializable {
     /**
      * 题目通过数
      */
-    private Integer acceptNum;
+    private Integer acceptedNum;
 
     /**
      * 判题用例（json数组）
