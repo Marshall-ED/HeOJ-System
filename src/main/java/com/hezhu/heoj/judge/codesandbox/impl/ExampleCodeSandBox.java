@@ -3,8 +3,7 @@ package com.hezhu.heoj.judge.codesandbox.impl;
 import com.hezhu.heoj.judge.codesandbox.CodeSandBox;
 import com.hezhu.heoj.judge.codesandbox.model.ExecuteCodeRequest;
 import com.hezhu.heoj.judge.codesandbox.model.ExecuteCodeResponse;
-import com.hezhu.heoj.model.dto.question.JudgeCase;
-import com.hezhu.heoj.model.dto.questionsubmit.JudgeInfo;
+import com.hezhu.heoj.judge.codesandbox.model.JudgeInfo;
 import com.hezhu.heoj.model.enums.JudgeInfoMessageEnum;
 import com.hezhu.heoj.model.enums.QuestionSubmitStatusEnum;
 

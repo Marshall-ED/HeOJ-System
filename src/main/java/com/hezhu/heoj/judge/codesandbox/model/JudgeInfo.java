@@ -1,4 +1,4 @@
-package com.hezhu.heoj.model.dto.questionsubmit;
+package com.hezhu.heoj.judge.codesandbox.model;
 
 import lombok.Data;
 

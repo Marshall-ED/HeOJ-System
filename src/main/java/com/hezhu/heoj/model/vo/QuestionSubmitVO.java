@@ -2,7 +2,7 @@ package com.hezhu.heoj.model.vo;
 
 import cn.hutool.json.JSONUtil;
 import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.hezhu.heoj.model.dto.questionsubmit.JudgeInfo;
+import com.hezhu.heoj.judge.codesandbox.model.JudgeInfo;
 import com.hezhu.heoj.model.entity.QuestionSubmit;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
