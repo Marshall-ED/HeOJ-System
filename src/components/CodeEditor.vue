@@ -43,24 +43,15 @@ const props = withDefaults(defineProps<Props>(), {
 // };
 
 watch(
+  //监听language属性，动态更改编辑器的语言
   () => props.language,
   () => {
-    document.getElementById("code-editor").innerHTML = "";
-    codeEditor.value = monaco.editor.create(codeEditorRef.value, {
-      value: props.value,
-      language: props.language,
-      automaticLayout: true,
-      colorDecorators: true,
-      minimap: {
-        enabled: true,
-      },
-      readOnly: false,
-      theme: "vs-dark",
-    });
-    // monaco.editor.setModelLanguage(
-    //   toRaw(codeEditor.value).getModel(),
-    //   props.language
-    // );
+    if (codeEditor.value) {
+      monaco.editor.setModelLanguage(
+        toRaw(codeEditor.value).getModel(),
+        props.language
+      );
+    }
   }
 );
 
