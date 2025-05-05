@@ -1,6 +1,13 @@
 # heog-frontend
 
 ## Project setup
+
+
+### openAPI
+```shell
+openapi --input http://localhost:8121/api/v2/api-docs --output ./generated --client axios
+```
+
 ```
 npm install
 ```
