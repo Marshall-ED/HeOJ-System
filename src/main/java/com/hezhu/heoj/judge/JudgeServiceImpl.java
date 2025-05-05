@@ -29,7 +29,6 @@ import java.util.stream.Collectors;
  * @Description:
  */
 @Service
-
 public class JudgeServiceImpl implements JudgeService {
 
     @Resource

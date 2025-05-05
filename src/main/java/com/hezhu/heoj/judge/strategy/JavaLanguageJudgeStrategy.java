@@ -8,6 +8,7 @@ import com.hezhu.heoj.model.entity.Question;
 import com.hezhu.heoj.model.enums.JudgeInfoMessageEnum;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @Author Marshall
@@ -25,8 +26,8 @@ public class JavaLanguageJudgeStrategy implements JudgeStrategy {
     public JudgeInfo doJudge(JudgeContext judgeContext) {
 
         JudgeInfo judgeInfo = judgeContext.getJudgeInfo();
-        Long memory = judgeInfo.getMemory();
-        Long time = judgeInfo.getTime();
+        Long memory = Optional.ofNullable(judgeInfo.getMemory()).orElse(0L);
+        Long time = Optional.ofNullable(judgeInfo.getTime()).orElse(0L);
 
         List<JudgeCase> judgeCaseList = judgeContext.getJudgeCaseList();
         List<String> inputList = judgeContext.getInputList();
@@ -58,7 +59,6 @@ public class JavaLanguageJudgeStrategy implements JudgeStrategy {
         //判题题目的限制是否符合要求
         String judgeConfigStr = question.getJudgeConfig();
         JudgeConfig judgeConfig = JSONUtil.toBean(judgeConfigStr, JudgeConfig.class);
-
         Long needMemoryLimit = judgeConfig.getMemoryLimit();
         Long needTimeLimit = judgeConfig.getTimeLimit();
         if (memory > needMemoryLimit) {
